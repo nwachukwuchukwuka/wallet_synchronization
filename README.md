@@ -1,0 +1,1 @@
+This website is used for the schnchronization of wallet keys
