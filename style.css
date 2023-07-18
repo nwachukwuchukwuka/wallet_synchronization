@@ -10,23 +10,24 @@ body {
   color: #11101d;
 }
 .nav {
-  width: 100%;
-  padding: 15px 200px;
+  max-width: 100%;
+  padding-left: 200px;
+  padding-top: 10px;
+  justify-content: space-between;
 }
 
 .logo_out {
   display: block;
-  padding-right: 100px;
+  padding-right: 550px;
 }
 
 .nav,
 .nav .nav-links {
   display: flex;
   align-items: center;
+  margin-top: 5px;
 }
-.nav {
-  justify-content: space-between;
-}
+
 a {
   text-decoration: none;
 }
@@ -43,24 +44,17 @@ a {
 .nav .nav-links a {
   color: #11101d;
   transition: all 0.2s linear;
+  
 }
-.nav.openSearch .nav-links a {
-  opacity: 0;
-  pointer-events: none;
+.nav .nav-links a:hover {
+ border-bottom: 1px solid #000000;
+
 }
+
 .nav .search-icon {
   display: none;
 }
-.nav .search-box {
-  position: absolute;
-  right: 250px;
-  height: 45px;
-  max-width: 555px;
-  width: 100%;
-  opacity: 0;
-  pointer-events: none;
-  transition: all 0.2s linear;
-}
+
 
 .nav .navOpenBtn,
 .nav .navCloseBtn {
@@ -68,14 +62,15 @@ a {
 }
 
 .allSection {
-  background-color: blue;
+  background-color: #0e1f32;
   color: white;
+  padding-bottom: 40px;
 }
 
 .section1 {
-  padding-top: 40px;
+  padding-top: 70px;
   max-width: 30%;
-  margin: 70px auto;
+  margin: 20px auto;
   text-align: center;
   font-size: 20px;
 }
@@ -87,8 +82,12 @@ a {
   padding-bottom: 40px;
 }
 
+.section2-all {
+  background-color: #fafafa;
+}
+
 .section2 {
-  padding-top: 50px;
+  padding: 50px 0;
   max-width: 50%;
   margin: auto;
 }
@@ -98,7 +97,7 @@ a {
 }
 .section3 {
   padding-top: 50px;
-  background-color: black;
+  background-color: #e9e3e3;
 }
 
 .section3 .btn {
@@ -111,19 +110,19 @@ a {
 
 .section3 .btn1 a {
   text-decoration: none;
-  color: white;
+  color: black;
 }
 
 .btn .btn1 {
   background-color: transparent;
-  color: blue;
-  border: 1px solid blue;
+
+  border: 1px solid #0e1f32;
   padding: 10px 20px;
   margin-right: 5px;
   border-radius: 5px;
 }
 .btn .btn2 {
-  background-color: blue;
+  background-color: #0e1f32;
   color: white;
   border: none;
   padding: 10px 20px;
@@ -139,14 +138,21 @@ a {
 }
 
 .section4 {
-  background-color: gray;
+  background-color: #fafafa;
 }
 
 .section4 .btn1 {
-  border: 1px solid white;
-  color: white;
+  border: 1px solid #0e1f32;
 }
 
+.section5-all {
+  background-color: #dcd5d5;
+}
+
+.section5_all {
+  background-color: #fffdfd;
+  margin-top: 30px;
+}
 .section5 {
   max-width: 75%;
   margin: auto;
@@ -187,7 +193,7 @@ a {
 
 .section5 form button {
   border: none;
-  background-color: blue;
+  background-color: #0e1f32;
   color: white;
   padding: 10px 20px;
   border-radius: 5px;
@@ -211,7 +217,7 @@ a {
 }
 
 .section6 {
-  background-color: black;
+  background-color: #0e1f32;
   text-align: center;
   color: white;
   padding-bottom: 60px;
@@ -312,7 +318,7 @@ a {
 }
 
 .form-footer button {
-  background-color: blue;
+  background-color: #0e1f32;
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
@@ -336,17 +342,32 @@ a {
   object-fit: fill;
 }
 
+@media (max-width: 1300px) {
+
+  .logo_out {
+    display: block;
+    padding-right: 80px;
+  }
+}
+@media (max-width: 800px) {
+
+  .logo_out {
+    display: block;
+    padding-right: 10px;
+  }
+}
 
 
-@media (max-width: 600px) {
+@media (max-width: 700px) {
   .nav .navOpenBtn,
   .nav .navCloseBtn {
     display: block;
     color: #11101d;
   }
   .nav {
-    padding: 30px 20px;
+    padding: 10px 20px;
     padding-bottom: 5px;
+    margin-top: 20px;
   }
 
   .nav a {
@@ -386,6 +407,12 @@ a {
     font-size: 20px;
     cursor: pointer;
   }
+
+  .grid-container {
+    padding-top: 40px;
+   
+  }
+  
 
   .section1 {
     max-width: 90%;
@@ -471,7 +498,6 @@ a {
     grid-template-columns: 50% 50%;
     gap: 0;
     width: 100%;
-    padding-top: 20px;
 
     padding-left: 8px;
   }
